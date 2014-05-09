@@ -12,6 +12,7 @@ namespace RestService.Controllers
         // GET api/login
         public IEnumerable<string> Get()
         {
+
             return new string[] { "value1", "value2" };
         }
 
