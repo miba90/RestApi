@@ -12,7 +12,6 @@ namespace RestService.Controllers
         // GET api/login
         public IEnumerable<string> Get()
         {
-            var val = DateTime.UtcNow;
             return new string[] { "value1", "value2" };
         }
 
@@ -20,6 +19,7 @@ namespace RestService.Controllers
         public string Get(string val)
         {
             return "value " + val;
+
         }
 
         // POST api/login
