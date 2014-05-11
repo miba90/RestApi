@@ -22,6 +22,8 @@ namespace RestService
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            HttpContext.Current.Application["Users"] = new List<string>();
         }
     }
 }

@@ -1,41 +1,30 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using RestService.Models.Login;
+using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Net.Http;
 using System.Web;
 using System.Web.Http;
-using System.Web.Mvc;
 
 namespace RestService.Controllers
 {
     public class LoginController : ApiController
     {
-        // GET api/login
-        public IEnumerable<string> Get()
-        {
-
-            return new string[] { "value1", "value2" };
-        }
-
-        // GET api/login/5
-        public string Get(string val)
-        {
-            return "value " + val;
-
-        }
-
         // POST api/login
-        public void Post([FromBody]string ver, [FromBody]string os, [FromBody]string locale, [FromBody]string login, [FromBody]string password)
+        [HttpPost]
+        public HttpResponseMessage Post([FromBody]string s)
         {
-        }
+            LoginInput input = JsonConvert.DeserializeObject<LoginInput>(s);
+            if(ModelState.IsValid)
+            {
+                var users = (List<string>)HttpContext.Current.Application["Users"];
+                if (users.Contains(input.login))
+                    return this.Request.CreateResponse(System.Net.HttpStatusCode.Conflict);
+                else
+                    users.Add(input.login);
+            }
 
-        // PUT api/login/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/login/5
-        public void Delete(int id)
-        {
+            return this.Request.CreateResponse(System.Net.HttpStatusCode.OK, JsonConvert.SerializeObject(input));
         }
     }
 }

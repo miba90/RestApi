@@ -18,6 +18,13 @@ namespace RestService
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            //routes.MapRoute(
+            //    name: "Second",
+            //    url: "{controller}/{action}/{id}/{param1}",
+            //    defaults: new { controller = "Values", action = "Get", id = UrlParameter.Optional, param1 = UrlParameter.Optional },
+            //    constraints: new { controller = "Values" }
+            //);
         }
     }
 }

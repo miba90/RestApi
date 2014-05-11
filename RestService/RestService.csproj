@@ -193,13 +193,25 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controllers\GetController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Conversation\Conversation.cs" />
+    <Compile Include="Models\Conversation\IMessageRepository.cs" />
+    <Compile Include="Models\Conversation\Message.cs" />
+    <Compile Include="Models\Conversation\MessageRepositoryHardcoded.cs" />
+    <Compile Include="Models\Error\Error401.cs" />
+    <Compile Include="Models\Error\Error500.cs" />
+    <Compile Include="Models\Login\LoginInput.cs" />
+    <Compile Include="Models\Login\LoginOutput200.cs" />
+    <Compile Include="Models\Login\LoginOutput403.cs" />
+    <Compile Include="Models\Login\LoginOutput409.cs" />
+    <Compile Include="Models\Logout\LogoutInput.cs" />
+    <Compile Include="Models\Logout\LogoutOutput.cs" />
+    <Compile Include="Models\Update\UpdateInput.cs" />
+    <Compile Include="Models\Update\UpdateOutput.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -274,7 +286,6 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="FreeSub.publishsettings" />
     <None Include="Properties\PublishProfiles\RestSrv.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
@@ -321,7 +332,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="Models\Helper\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
