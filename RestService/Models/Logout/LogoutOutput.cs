@@ -7,5 +7,6 @@ namespace RestService.Models.Logout
 {
     public class LogoutOutput
     {
+        public int serverTime { get; set; }
     }
 }
