@@ -11,9 +11,9 @@ namespace RestService
         {
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional},
-                constraints: new { controller = "Login" }
+                routeTemplate: "api/{controller}"
+                //defaults: new { id = RouteParameter.Optional},
+                //constraints: new { controller = "Login" }
             );
 
             var appXmlType = config.Formatters.XmlFormatter.SupportedMediaTypes.FirstOrDefault(t => t.MediaType == "application/xml");

@@ -195,6 +195,7 @@
     </Compile>
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\UpdateController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -204,6 +205,9 @@
     <Compile Include="Models\Conversation\MessageRepositoryHardcoded.cs" />
     <Compile Include="Models\Error\Error401.cs" />
     <Compile Include="Models\Error\Error500.cs" />
+    <Compile Include="Models\Helper\Enums.cs" />
+    <Compile Include="Models\Helper\Location.cs" />
+    <Compile Include="Models\Helper\Tools.cs" />
     <Compile Include="Models\Login\LoginInput.cs" />
     <Compile Include="Models\Login\LoginOutput200.cs" />
     <Compile Include="Models\Login\LoginOutput403.cs" />
@@ -332,7 +336,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\Helper\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

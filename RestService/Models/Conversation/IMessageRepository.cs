@@ -8,7 +8,7 @@ namespace RestService.Models.Conversation
 {
     interface IMessageRepository
     {
-        List<Message> Messages { get; set; }
+        List<Message> Messages { get;}
         void Add(Message message);
         void Remove(int messageId);
     }
