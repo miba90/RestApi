@@ -43,5 +43,9 @@ namespace RestService
             return HttpContext.Current.Request.AppRelativeCurrentExecutionFilePath.StartsWith(_WebApiExecutionPath);
         }
 
+        private static void Aop()
+        {
+
+        }
     }
 }
